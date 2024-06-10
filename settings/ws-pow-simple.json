@@ -1,0 +1,13 @@
+{
+    "blockVersion": "0.9",
+    "id": "S1",
+    "host": "127.0.0.1",
+    "port": 19001,
+    "protocol": "ws",
+    "consensusAlgorithm": "PoW",
+    "consensusInterval": 60000,
+    "nodes": [
+        { "id": "S2", "url": "ws://127.0.0.1:19002" },
+        { "id": "S3", "url": "ws://127.0.0.1:19003" }
+    ]
+}

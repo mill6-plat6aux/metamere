@@ -1,0 +1,25 @@
+{
+  "name": "metamere",
+  "description": "Ultra-lightweight Blockchain",
+  "version": "0.9.1",
+  "author": "Takuro Okada",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build",
+    "start": "NODE_ENV=production pm2 start index.js --name Core",
+    "test": "npm run test:static & npm run test:testcase",
+    "test:static": "eslint src/**/*.js",
+    "test:testcase": "mocha"
+  },
+  "dependencies": {
+    "async-lock": "^1.4.1",
+    "axon": "git+https://github.com/mill6-plat6aux/axon",
+    "bigint-buffer": "^1.1.5",
+    "leveldown": "^6.1.1",
+    "levelup": "^5.1.1",
+    "ws": "^8.17.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.4.0"
+  }
+}

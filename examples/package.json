@@ -1,0 +1,11 @@
+{
+  "name": "metamere-client-examples",
+  "version": "0.9.0",
+  "description": "Example programs with the metamere client.",
+  "author": "Takuro Okada",
+  "license": "MIT",
+  "dependencies": {
+    "metamere-client": "file:/Users/okada/Desktop/metamere-client",
+    "uuid": "^9.0.1"
+  }
+}

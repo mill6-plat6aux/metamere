@@ -1,0 +1,24 @@
+{
+    "blockVersion": "1.0",
+    "id": "S1",
+    "protocol": "tls",
+    "host": "127.0.0.1",
+    "port": 15001,
+    "storage": "LevelDB",
+    "indexKeys": [
+        "transactionId"
+    ],
+    "consensusAlgorithm": "Raft",
+    "keepaliveInterval": 50,
+    "electionMaxInterval": 300,
+    "electionMinInterval": 150,
+    "nodes": [
+        { "id": "S2", "url": "tls://127.0.0.1:15002" },
+        { "id": "S3", "url": "tls://127.0.0.1:15003" }
+    ],
+    "privateKey": "certificates/s1.key",
+    "certificate": "certificates/s1.crt",
+    "rootCertificates": [
+        "certificates/root.crt"
+    ]
+}

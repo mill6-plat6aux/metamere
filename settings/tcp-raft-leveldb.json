@@ -1,0 +1,18 @@
+{
+    "blockVersion": "1.0",
+    "id": "S1",
+    "host": "127.0.0.1",
+    "port": 19001,
+    "storage": "LevelDB",
+    "indexKeys": [
+        "transactionId"
+    ],
+    "consensusAlgorithm": "Raft",
+    "keepaliveInterval": 50,
+    "electionMaxInterval": 300,
+    "electionMinInterval": 150,
+    "nodes": [
+        { "id": "S2", "url": "tcp://127.0.0.1:19002" },
+        { "id": "S3", "url": "tcp://127.0.0.1:19003" }
+    ]
+}

@@ -85,7 +85,7 @@ The following command will stop all metamere nodes.
 
 ## Developers
 
-[Takuro Okada](mill6.plat6aux@gmail.com)
+[Takuro Okada](mailto:mill6.plat6aux@gmail.com)
 
 
 ---

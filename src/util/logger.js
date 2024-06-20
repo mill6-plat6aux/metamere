@@ -18,8 +18,6 @@ exports.LogLevel = LogLevel;
 
 class Logger {
 
-    #settingFile = "settings/log.json";
-
     #threshold = 2;
 
     #output;
@@ -31,8 +29,11 @@ class Logger {
      */
     constructor(caller, settingFilePath) {
         let settings;
+        if(settingFilePath == null) {
+            settingFilePath = "settings/log.json";
+        }
         try {
-            settings = JSON.parse(readFileSync(this.#settingFile, "utf8"));
+            settings = JSON.parse(readFileSync(settingFilePath, "utf8"));
         }catch(error) {
             settings = {
                 threshold: "info"
@@ -77,6 +78,7 @@ class Logger {
         }
         message = this.dateString() + " " + message + "\n";
         if(this.#output !== undefined) {
+            message = message.replaceAll(/\\u001b\[[0-9]{1,2}m/, "");
             writeFile(this.#output, message, function(){});
         }else {
             process.stdout.write(message);
@@ -92,6 +94,7 @@ class Logger {
         }
         message = this.dateString() + " " + message + "\n";
         if(this.#errorOutput !== undefined) {
+            message = message.replaceAll(/\\u001b\[[0-9]{1,2}m/, "");
             writeFile(this.#errorOutput, message, function(){});
         }else {
             process.stderr.write(message);

@@ -5,7 +5,7 @@
   "author": "Takuro Okada",
   "license": "MIT",
   "dependencies": {
-    "metamere-client": "file:/Users/okada/Desktop/metamere-client",
+    "metamere-client": "^0.9.2",
     "uuid": "^9.0.1"
   }
 }
